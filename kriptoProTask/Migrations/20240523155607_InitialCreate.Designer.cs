@@ -12,7 +12,7 @@ using kriptoProTask;
 namespace kriptoProTask.Migrations
 {
     [DbContext(typeof(ModelContext))]
-    [Migration("20240522222008_InitialCreate")]
+    [Migration("20240523155607_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -27,7 +27,7 @@ namespace kriptoProTask.Migrations
 
             modelBuilder.Entity("kriptoProTask.Model", b =>
                 {
-                    b.Property<Guid>("ProcessID")
+                    b.Property<Guid>("ProcessId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
@@ -37,7 +37,7 @@ namespace kriptoProTask.Migrations
                     b.Property<long>("Number")
                         .HasColumnType("bigint");
 
-                    b.HasKey("ProcessID");
+                    b.HasKey("ProcessId");
 
                     b.ToTable("kriptoProdb");
                 });

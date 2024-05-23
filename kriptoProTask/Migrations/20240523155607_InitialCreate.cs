@@ -15,13 +15,13 @@ namespace kriptoProTask.Migrations
                 name: "kriptoProdb",
                 columns: table => new
                 {
-                    ProcessID = table.Column<Guid>(type: "uuid", nullable: false),
+                    ProcessId = table.Column<Guid>(type: "uuid", nullable: false),
                     Number = table.Column<long>(type: "bigint", nullable: false),
                     DateCreated = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_kriptoProdb", x => x.ProcessID);
+                    table.PrimaryKey("PK_kriptoProdb", x => x.ProcessId);
                 });
         }
 
